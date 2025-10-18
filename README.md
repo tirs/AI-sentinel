@@ -1,4 +1,4 @@
-# 🛡️ AI Sentinel: Multimodal Explainable System for Detecting Digital Human Rights Violations
+# AI Sentinel: Multimodal Explainable System for Detecting Digital Human Rights Violations
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -6,20 +6,20 @@
 
 > **An AI-powered system that monitors global online platforms to detect hate speech, disinformation, and deepfake propaganda that lead to real-world human rights violations.**
 
-## 🌟 Overview
+## Overview
 
 AI Sentinel is a **production-ready**, **multimodal AI system** designed to protect digital rights and democracy worldwide. It combines state-of-the-art NLP, Computer Vision, and Explainable AI to provide transparent, actionable insights for NGOs, journalists, and digital rights organizations.
 
 ### Why AI Sentinel?
 
-- 🎯 **Multimodal Detection**: Analyzes text, images, and videos
-- 🔍 **Explainable AI**: SHAP/LIME integration for transparency
-- 🌍 **Global Correlation**: Real-time GDELT event integration
-- 📊 **Interactive Dashboard**: Beautiful Streamlit visualizations
-- 🚀 **Production Ready**: Docker deployment, comprehensive testing
-- 📚 **Well Documented**: 2,000+ lines of documentation
+- **Multimodal Detection**: Analyzes text, images, and videos
+- **Explainable AI**: SHAP/LIME integration for transparency
+- **Global Correlation**: Real-time GDELT event integration
+- **Interactive Dashboard**: Beautiful Streamlit visualizations
+- **Production Ready**: Docker deployment, comprehensive testing
+- **Well Documented**: 2,000+ lines of documentation
 
-## ✨ Core Features
+## Core Features
 
 ### 1. NLP Analysis
 - Multilingual hate speech detection (100+ languages)
@@ -52,7 +52,7 @@ AI Sentinel is a **production-ready**, **multimodal AI system** designed to prot
 - Analytics and visualizations
 - Geographic mapping
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.10 or higher
@@ -101,11 +101,11 @@ streamlit run src/dashboard/app.py
 
 ### Access the System
 
-- 🌐 **Dashboard**: http://localhost:8501
-- 🔌 **API**: http://localhost:8000
-- 📖 **API Docs**: http://localhost:8000/docs
+- **Dashboard**: http://localhost:8501
+- **API**: http://localhost:8000
+- **API Docs**: http://localhost:8000/docs
 
-## 📊 Technology Stack
+## Technology Stack
 
 ### Machine Learning
 - **PyTorch**: Deep learning framework
@@ -134,7 +134,7 @@ streamlit run src/dashboard/app.py
 - **pytest**: Testing framework
 - **black/flake8**: Code quality
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Ethical/
@@ -197,7 +197,7 @@ Ethical/
 └── verify_installation.py        # Installation checker
 ```
 
-## 🎓 Training Models
+## Training Models
 
 ### NLP Model (Hate Speech Detection)
 
@@ -226,7 +226,7 @@ python scripts/train_vision_model.py
 - **GPU Memory**: 16GB+ VRAM recommended
 - **Accuracy**: ~90% on test set
 
-## 🔌 API Usage
+## API Usage
 
 ### Text Detection
 
@@ -277,7 +277,7 @@ response = requests.get(
 events = response.json()["events"]
 ```
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 ### Quick Deploy
 
@@ -286,10 +286,10 @@ docker-compose up -d
 ```
 
 This starts:
-- ✅ API Server (port 8000)
-- ✅ Dashboard (port 8501)
-- ✅ Elasticsearch (port 9200)
-- ✅ Kibana (port 5601)
+- API Server (port 8000)
+- Dashboard (port 8501)
+- Elasticsearch (port 9200)
+- Kibana (port 5601)
 
 ### Access Services
 
@@ -298,7 +298,7 @@ This starts:
 - **Elasticsearch**: http://localhost:9200
 - **Kibana**: http://localhost:5601
 
-## 🧪 Testing
+## Testing
 
 ```powershell
 # Run all tests
@@ -311,7 +311,7 @@ pytest tests/ --cov=src --cov-report=html
 pytest tests/test_models.py -v
 ```
 
-## 📚 Documentation
+## Documentation
 
 - **[START_HERE.md](START_HERE.md)**: Complete getting started guide
 - **[QUICKSTART.md](QUICKSTART.md)**: Quick installation guide
@@ -320,7 +320,7 @@ pytest tests/test_models.py -v
 - **[PROJECT_STATS.md](PROJECT_STATS.md)**: Project statistics and metrics
 - **[examples/](examples/)**: Code examples and tutorials
 
-## 🌍 Datasets
+## Datasets
 
 ### HateXplain (Automatic Download)
 - **Size**: ~20,000 samples
@@ -341,7 +341,7 @@ pytest tests/test_models.py -v
 - **Languages**: 100+
 - **Access**: Free API
 
-## 🎯 Use Cases
+## Use Cases
 
 ### 1. Human Rights Monitoring
 Monitor social media for hate speech targeting vulnerable groups.
@@ -358,7 +358,7 @@ Connect online hate speech with real-world violence.
 ### 5. Research & Analysis
 Academic research on digital rights violations.
 
-## 📊 Performance
+## Performance
 
 ### Model Performance
 - **NLP Accuracy**: ~85% on HateXplain
@@ -370,7 +370,7 @@ Academic research on digital rights violations.
 - **Throughput**: 100+ requests/second
 - **Uptime**: 99.9% target
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please:
 
@@ -380,13 +380,13 @@ Contributions are welcome! Please:
 4. Add tests
 5. Submit a pull request
 
-## 📄 License
+## License
 
 MIT License - See [LICENSE](LICENSE) file for details.
 
 **Built for global digital rights protection.**
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 ### Datasets
 - **HateXplain**: Hugging Face
@@ -401,7 +401,7 @@ MIT License - See [LICENSE](LICENSE) file for details.
 - Human rights defenders
 - Truth and democracy advocates
 
-## 📞 Support
+## Support
 
 ### Documentation
 - Check comprehensive docs in the project
@@ -418,9 +418,9 @@ MIT License - See [LICENSE](LICENSE) file for details.
 - Discussion Forum
 - Email Support
 
-## 🚀 Roadmap
+## Roadmap
 
-### Phase 1 (Completed) ✅
+### Phase 1 (Completed)
 - Core models implementation
 - API and dashboard
 - Documentation
@@ -438,7 +438,7 @@ MIT License - See [LICENSE](LICENSE) file for details.
 - 100+ language support
 - Global deployment
 
-## 📈 Impact
+## Impact
 
 ### Target Users
 - **NGOs**: 1,000+ organizations
