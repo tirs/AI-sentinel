@@ -8,6 +8,7 @@ from typing import Dict, Any, List
 import base64
 from io import BytesIO
 import json
+import os
 
 from src.config import settings, yaml_config
 from src.utils import get_logger
@@ -21,15 +22,21 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
-        'Get Help': 'https://github.com/yourusername/ai-sentinel',
-        'Report a bug': "https://github.com/yourusername/ai-sentinel/issues",
+        'Get Help': 'https://github.com/tirs/AI-sentinel',
+        'Report a bug': "https://github.com/tirs/AI-sentinel/issues",
         'About': "# AI Sentinel\nMultimodal Explainable System for Detecting Digital Human Rights Violations"
     }
 )
 
-# Use localhost for client connections
-API_HOST = "localhost" if settings.API_HOST == "0.0.0.0" else settings.API_HOST
-API_BASE_URL = f"http://{API_HOST}:{settings.API_PORT}"
+# Configure API URL for different environments (Railway, Docker, Local)
+# Priority: Environment variable > Default to localhost
+API_BASE_URL = os.getenv(
+    "API_URL",
+    os.getenv(
+        "API_BASE_URL",
+        f"http://localhost:{settings.API_PORT}"
+    )
+)
 
 # API timeout settings
 API_TIMEOUT = 5  # Reduced timeout for faster failure detection

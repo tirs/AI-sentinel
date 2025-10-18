@@ -1,0 +1,38 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Development files
+.vscode
+.env
+*.pyc
+__pycache__
+*.egg-info
+.pytest_cache
+
+# Data files (we'll use persistent volumes instead)
+data/raw/*.mp4
+data/raw/*.avi
+data/raw/*.mov
+data/raw/frames/*
+
+# Large model files (can be downloaded during build or via volumes)
+models/*.pth
+models/*.pt
+models/*.bin
+
+# Logs and cache
+logs/
+*.log
+cache/
+
+# Documentation
+docs/
+overleaf_paper/
+
+# Other
+.DS_Store
+*.pdf
+*.zip
+*.tar.gz
