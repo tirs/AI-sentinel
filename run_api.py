@@ -1,5 +1,9 @@
 """
 Simple script to run the API server with proper module path
+
+Supports multiple deployment environments:
+- Development: auto-reload enabled, 1 worker
+- Production: multi-worker mode, no reload, disabled colors for containers
 """
 import sys
 import os
@@ -13,14 +17,36 @@ if __name__ == "__main__":
     import uvicorn
     from src.config import settings
 
-    # Disable reload in production (Railway, Docker, etc.)
-    reload = os.getenv("ENVIRONMENT", "development") == "development"
-    workers = int(os.getenv("WORKERS", settings.API_WORKERS))
+    # Determine environment
+    environment = os.getenv("ENVIRONMENT", "development")
+    is_production = environment != "development"
 
-    uvicorn.run(
-        "src.api.server:app",
-        host=settings.API_HOST,
-        port=settings.API_PORT,
-        reload=reload,
-        workers=workers if not reload else 1
-    )
+    # Configure uvicorn based on environment
+    if is_production:
+        # Production configuration
+        workers = int(os.getenv("WORKERS", settings.API_WORKERS))
+        log_level = os.getenv("LOG_LEVEL", "info")
+        use_colors = False  # Disabled for container compatibility
+
+        uvicorn.run(
+            "src.api.server:app",
+            host=settings.API_HOST,
+            port=settings.API_PORT,
+            workers=workers,
+            reload=False,
+            log_level=log_level,
+            use_colors=use_colors,
+            access_log=True
+        )
+    else:
+        # Development configuration with auto-reload
+        uvicorn.run(
+            "src.api.server:app",
+            host=settings.API_HOST,
+            port=settings.API_PORT,
+            reload=True,
+            workers=1,
+            log_level="debug",
+            use_colors=True,
+            access_log=True
+        )

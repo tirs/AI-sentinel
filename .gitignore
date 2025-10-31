@@ -35,11 +35,9 @@ ENV/
 # Environment
 .env
 
-# Data - tracked by Git LFS
-# Removed: data/raw/, data/processed/, data/cache/ - now using Git LFS
-
-# Models - tracked by Git LFS
-# Removed: model files - now using Git LFS
+# Cache & temporary files
+cache/
+*.cache
 
 # Logs
 logs/
